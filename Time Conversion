@@ -1,0 +1,24 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+ int main()
+ {
+       int h,m,sec;
+      char a[2];
+     scanf("%d:%d:%d%s",&h,&m,&sec,a);
+     if(strcmp(a,"PM")==0 && h!=12)
+     {
+            h+=12;
+     }
+      if(strcmp(a,"AM")==0 && h==12)
+     {
+            h=0;
+     }
+     printf("%0.2d:%0.2d:%0.2d",h,m,sec);
+     
+ } 
+
