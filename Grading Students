@@ -1,0 +1,39 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+ int main()
+ {
+   int a[100],n,i,y,x,z;
+     scanf("%d",&n);
+     for(i=0;i<n;i++)
+     {
+         scanf("%d",&a[i]);
+     }
+     for(i=0;i<n;i++)
+     {
+         if(a[i]<38)
+         {    
+             printf("%d\n",a[i]);
+         }
+         else if(a[i]>=38)
+         {
+             y=a[i]%5;
+             z=a[i]/5;
+             x=5-y;
+             if(x<3)
+             { 
+                   a[i]=z*5+5;
+                 printf("%d\n",a[i]);
+             }
+         
+         else 
+         {
+             printf("%d\n",a[i]);
+         }
+         }
+     }   
+ }
