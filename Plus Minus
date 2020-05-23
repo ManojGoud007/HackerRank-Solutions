@@ -1,0 +1,38 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int a[100],n,i;
+    float count=0,flag=0,ab=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<n;i++)
+    { 
+        if(a[i]>0)
+        {
+            count++;
+        }
+        else if(a[i]<0)
+        {
+            flag++;
+        }
+        else
+        {
+          ab++;
+        }
+    }
+   float x=count/n;
+    float b=flag/n;
+    float c=ab/n;
+    printf("%f\n%f\n%f",x,b,c);
+    }
+
